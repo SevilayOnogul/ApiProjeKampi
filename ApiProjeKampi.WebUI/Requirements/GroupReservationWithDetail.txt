@@ -1,5 +1,4 @@
-﻿@using ApiProjeKampi.WebUI.Dtos.GroupReservationDtos
-@model List<ResultGroupReservationDto>
+﻿@model List<ResultGroupReservationDto>
 
 <div class="card shadow-sm border-0 rounded-4">
     <div class="card-header d-flex justify-content-between align-items-center bg-white py-3">
@@ -330,12 +329,12 @@
 </style>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('DOMContentLoaded', function() {
         const detailButtons = document.querySelectorAll('.detail-btn');
         const modalElement = document.getElementById('reservationDetailModal');
 
         detailButtons.forEach(button => {
-            button.addEventListener('click', function (e) {
+            button.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
 
@@ -364,19 +363,19 @@
 
                 // Update status badge
                 document.getElementById('modal-status').innerHTML = `
-                        <span class="badge ${statusClass} px-3 py-2 rounded-pill fs-6">
-                            <i class="${statusIcon} me-1"></i>
-                            ${status}
-                        </span>
-                    `;
+                    <span class="badge ${statusClass} px-3 py-2 rounded-pill fs-6">
+                        <i class="${statusIcon} me-1"></i>
+                        ${status}
+                    </span>
+                `;
 
                 // Update priority badge
                 document.getElementById('modal-priority').innerHTML = `
-                        <span class="badge bg-light text-dark px-3 py-2 rounded-pill fs-6">
-                            <i class="${priorityIcon} me-1"></i>
-                            ${priority}
-                        </span>
-                    `;
+                    <span class="badge bg-light text-dark px-3 py-2 rounded-pill fs-6">
+                        <i class="${priorityIcon} me-1"></i>
+                        ${priority}
+                    </span>
+                `;
 
                 // Show modal using Bootstrap 5
                 const modal = new bootstrap.Modal(modalElement, {
@@ -391,7 +390,7 @@
         // Explicit close button handlers with direct event binding
         const closeButtons = document.querySelectorAll('[data-bs-dismiss="modal"]');
         closeButtons.forEach(btn => {
-            btn.addEventListener('click', function (e) {
+            btn.addEventListener('click', function(e) {
                 e.preventDefault();
                 e.stopPropagation();
                 const modal = bootstrap.Modal.getInstance(modalElement);
@@ -402,7 +401,7 @@
         });
 
         // Backdrop click handler
-        modalElement.addEventListener('click', function (e) {
+        modalElement.addEventListener('click', function(e) {
             if (e.target === modalElement) {
                 const modal = bootstrap.Modal.getInstance(modalElement);
                 if (modal) {

@@ -84,7 +84,7 @@ namespace ApiProjeKampi.WebApi.Controllers
         [HttpGet("GetApprovedReservations")]
         public IActionResult GetApprovedReservations()
         {
-            var value = _context.Reservations.Where(x => x.ReservationStatus == "Onaylandı").Count();
+            var value = _context.Reservations.Where(x => x.ReservationStatus == "Onaylandi").Count();
             return Ok(value);
         }
 

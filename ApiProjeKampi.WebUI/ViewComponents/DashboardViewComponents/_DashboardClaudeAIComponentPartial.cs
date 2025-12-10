@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ApiProjeKampi.WebUI.ViewComponents.AdminLayoutViewComponents
+namespace ApiProjeKampi.WebUI.ViewComponents.DashboardViewComponents
 {
-    public class _NavbarAdminLayoutComponentPartial:ViewComponent
+    public class _DashboardClaudeAIComponentPartial:ViewComponent
     {
         public IViewComponentResult Invoke()
         {

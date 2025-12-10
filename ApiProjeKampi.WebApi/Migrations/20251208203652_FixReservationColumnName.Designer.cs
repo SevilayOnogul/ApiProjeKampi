@@ -4,6 +4,7 @@ using ApiProjeKampi.WebApi.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ApiProjeKampi.WebApi.Migrations
 {
     [DbContext(typeof(ApiContext))]
-    partial class ApiContextModelSnapshot : ModelSnapshot
+    [Migration("20251208203652_FixReservationColumnName")]
+    partial class FixReservationColumnName
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -56,7 +59,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("AboutId");
 
-                    b.ToTable("Abouts", (string)null);
+                    b.ToTable("Abouts");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Category", b =>
@@ -73,7 +76,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Categories", (string)null);
+                    b.ToTable("Categories");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Chef", b =>
@@ -102,7 +105,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("ChefId");
 
-                    b.ToTable("Chefs", (string)null);
+                    b.ToTable("Chefs");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Contact", b =>
@@ -135,7 +138,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("ContactId");
 
-                    b.ToTable("Contacts", (string)null);
+                    b.ToTable("Contacts");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.EmployeeTask", b =>
@@ -169,7 +172,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("EmployeeTaskId");
 
-                    b.ToTable("EmployeeTasks", (string)null);
+                    b.ToTable("EmployeeTasks");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.EmployeeTaskChef", b =>
@@ -192,7 +195,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasIndex("EmployeeTaskId");
 
-                    b.ToTable("EmployeeTaskChefs", (string)null);
+                    b.ToTable("EmployeeTaskChefs");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Feature", b =>
@@ -225,7 +228,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("FeatureId");
 
-                    b.ToTable("Features", (string)null);
+                    b.ToTable("Features");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.GroupReservation", b =>
@@ -270,7 +273,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("GroupReservationId");
 
-                    b.ToTable("GroupReservations", (string)null);
+                    b.ToTable("GroupReservations");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Image", b =>
@@ -291,7 +294,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("ImageId");
 
-                    b.ToTable("Images", (string)null);
+                    b.ToTable("Images");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Message", b =>
@@ -329,7 +332,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("MessageId");
 
-                    b.ToTable("Messages", (string)null);
+                    b.ToTable("Messages");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Notification", b =>
@@ -356,7 +359,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("NotificationId");
 
-                    b.ToTable("Notifications", (string)null);
+                    b.ToTable("Notifications");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Product", b =>
@@ -389,7 +392,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("Products", (string)null);
+                    b.ToTable("Products");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Reservation", b =>
@@ -432,7 +435,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("ReservationId");
 
-                    b.ToTable("Reservations", (string)null);
+                    b.ToTable("Reservations");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Service", b =>
@@ -457,7 +460,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("ServiceId");
 
-                    b.ToTable("Services", (string)null);
+                    b.ToTable("Services");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.Testimonial", b =>
@@ -486,7 +489,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("TestimonialId");
 
-                    b.ToTable("Testimonials", (string)null);
+                    b.ToTable("Testimonials");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.YummyEvent", b =>
@@ -517,7 +520,7 @@ namespace ApiProjeKampi.WebApi.Migrations
 
                     b.HasKey("YummyEventId");
 
-                    b.ToTable("YummyEvents", (string)null);
+                    b.ToTable("YummyEvents");
                 });
 
             modelBuilder.Entity("ApiProjeKampi.WebApi.Entities.EmployeeTaskChef", b =>

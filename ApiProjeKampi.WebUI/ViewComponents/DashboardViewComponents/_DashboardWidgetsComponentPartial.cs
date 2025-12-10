@@ -44,7 +44,7 @@ namespace ApiProjeKampi.WebUI.ViewComponents.DashboardViewComponents
             var client4 = _httpClientFactory.CreateClient();
             var responseMessage4 = await client4.GetAsync("https://localhost:7215/api/Reservations/GetApprovedReservations");
             var jsonData4 = await responseMessage4.Content.ReadAsStringAsync();
-            ViewBag.v5 = jsonData4;
+            ViewBag.v4 = jsonData4;
             ViewBag.r4 = r4;
 
             return View();

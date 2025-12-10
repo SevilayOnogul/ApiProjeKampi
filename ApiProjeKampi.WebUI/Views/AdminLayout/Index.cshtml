@@ -1,35 +1,28 @@
-﻿
-@{
+﻿@{
     Layout = null;
 }
 
 <!DOCTYPE html>
 <html lang="en">
 
-
 @await Component.InvokeAsync("_HeadAdminLayoutComponentPartial")
-
 
 <body>
     <div class="loader"></div>
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
 
-            @await Component.InvokeAsync("_NavbarAdminLAyoutComponentPartial")
+            @await Component.InvokeAsync("_NavbarAdminLayoutComponentPartial")
 
             @await Component.InvokeAsync("_SidebarAdminLayoutComponentPartial")
-       
-            <div class="main-content">
+
 
             <!-- Main Content -->
-            @RenderBody()
-                @await Component.InvokeAsync("_RightSettingsAdminLayoutComponentPartial")
-
-                
+            <div class="main-content">
+                @RenderBody()
+               @await Component.InvokeAsync("_RightSettingsAdminLayoutComponentPartial")
 
             </div>
-
-            
             <footer class="main-footer">
                 <div class="footer-left">
                     <a href="templateshub.net">Templateshub</a></a>
@@ -50,5 +43,5 @@
 </body>
 
 
-<!-- basic-table.html  21 Nov 2019 03:55:20 GMT -->
+<!-- basic-table.html  21 Nov 2019 03:55:20 GMT -->
 </html>

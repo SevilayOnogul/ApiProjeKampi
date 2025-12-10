@@ -8,6 +8,6 @@
         public string ImageUrl { get; set; }
         public string VideoCoverImageUrl { get; set; }
         public string VideoUrl { get; set; }
-        public int RezervationNumber { get; set; }
+        public string ReservationNumber { get; set; }
     }
 }
